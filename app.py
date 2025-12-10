@@ -24,7 +24,8 @@ def load_data(uploaded_file=None):
     """
     # 1) If user uploaded a file, use that
     if uploaded_file is not None:
-        df = pd.read_csv("India housing prices.csv")
+        # read directly from the uploaded file
+        df = pd.read_csv(uploaded_file)
     else:
         # 2) Try local files in current working directory
         df = None
